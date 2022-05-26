@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Diagram</title>
+    <script src="go.js"></script>
+    <script src="petrinet.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    <div
+      id="myDiagramDiv"
+      class="center"
+      style="width: 1000px; height: 500px; border: 4 solid black;"
+    ></div>
+    <div class="center">
+        <div>enter places:</div> 
+        <input type="text" id="places" placeholder="p1,p2,p3" value="i, p1, p2, o">
+        <div>enter transitions:</div> 
+        <input type="text" id="transitions" placeholder="t1,t2,t3" value="t1, t2, t3">
+        <div>enter arcs:</div> 
+        <input type="text" id="arcs" placeholder="p1-t1,t1-p2" value="(i,t1), (t1,p1), (p1,t2), (t2,p2), (t2, p1), (p2,t3), (t3, o)">
+        <br>
+        <button id="draw" class="btn" onclick="getData()">Draw</button>
+        <button class="btn" onclick="document.location.reload()">Reset</button>
+    </div>
+  </body>
+</html>
