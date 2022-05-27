@@ -11,7 +11,7 @@ A web application to draw petrinets when transitions, plalces and links are ente
     ```cd PetriNetDrawer ```
 * Make sure to have internet connection
 * Option 1
-    open the index.html file (but you will have to reload the page every time you draw a new diagram)
+    * open the index.html file (but you will have to reload the page every time you draw a new diagram)
 * Option 2
     * install python3 on your machine
     * run command ```python3 -m http.server```
