@@ -4,8 +4,10 @@ A web application to draw petrinets when transitions, plalces and links are ente
 
 # Instructions to run
 
-* Clone the project
+- Clone the project
+
     ```git clone https://github.com/AdhamMagdyA/PetriNetDrawer.git```
+    
     ```cd PetriNetDrawer ```
 * Make sure to have internet connection
 * Option 1
