@@ -74,7 +74,7 @@ function formatArcsToJson(array){
 
 function getData(){
     if(!drawable){
-        alert("Please reset the diagram before drawing another one");
+        alert("Please reset the diagram before drawing another one\nif you opened the page through index.html, please reload the page");
         return;
     }
 
