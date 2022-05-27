@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>Diagram</title>
-    <script src="go.js"></script>
-    <script src="petrinet.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="assets/go.js"></script>
+    <script src="assets/petrinet.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body >
-    <div
-      id="myDiagramDiv"
-      class="center"
-      style="width: 1000px; height: 500px; border: 4 solid black;"
-    ></div>
-    <div class="center">
-        <div>enter places:</div> 
-        <input type="text" id="places" placeholder="p1,p2,p3" value="i, p1, p2, o">
-        <div>enter transitions:</div> 
-        <input type="text" id="transitions" placeholder="t1,t2,t3" value="t1, t2, t3">
-        <div>enter arcs:</div> 
-        <input type="text" id="arcs" placeholder="p1-t1,t1-p2" value="(i,t1), (t1,p1), (p1,t2), (t2,p2), (t2, p1), (p2,t3), (t3, o)">
-        <br>
-        <button id="draw" class="btn" onclick="getData()">Draw</button>
-        <button class="btn" onclick="document.location.reload()">Reset</button>
+    <div class="container border border-secondary border-2 mb-3 mt-3" id="main">
+      <div
+        id="myDiagramDiv"
+        class="center"
+        style="width: 1000px; height: 500px; border: 4 solid black;"
+      ></div>
+    </div>
+    <div class="container">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Enter places</span>
+          <input id="places" type="text" class="form-control" placeholder="p1,p2,p3" value="i, p1, p2, o">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Enter transitions</span>
+          <input id="transitions" type="text" class="form-control" placeholder="t1,t2,t3" value="t1, t2, t3">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Enter links</span>
+          <input id="arcs" type="text" class="form-control" placeholder="(p1,t1),(t1,p2)" value="(i,t1), (t1,p1), (p1,t2), (t2,p2), (t2, p1), (p2,t3), (t3, o)">
+        </div>
+        <button id="draw" class="btn btn-primary" onclick="getData()">Draw</button>
+        <button class="btn btn-warning" onclick="reset()">Reset</button>
     </div>
   </body>
 </html>

@@ -1,5 +1,11 @@
 let drawable = true;
 
+function reset(){ 
+    $( "#main" ).load(window.location.href + " #main" );
+    drawable = true;
+}
+
+
 function splitToArrays(str) {
     let array = str.value.split(",");
     array = array.map(function(item){
@@ -82,15 +88,12 @@ function getData(){
 
     let placesArray = splitToArrays(places);
     let placesJson = foramtPlacesAsJson(placesArray);
-    console.log("placesArray", placesJson);
 
     let transitionsArray = splitToArrays(transitions);
     let transitionsJson = foramtTransitionsAsJson(transitionsArray);
-    console.log("transitionsArray", transitionsJson);
 
     let arcsArray = splitArcsToArray(arcs);
     let arcsJson = formatArcsToJson(arcsArray);
-    console.log("arcsArray", arcsJson);
 
     init(placesJson,transitionsJson,arcsJson);
     drawable = false;
